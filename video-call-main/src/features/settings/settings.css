@@ -1,0 +1,153 @@
+/* ===============================
+   LAYOUT
+=============================== */
+.settings-container {
+  display: flex;
+  height: 100vh;
+  background: #f9fafb;
+}
+
+.settings-sidebar {
+  width: 220px;
+  background: #111827;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.settings-sidebar button {
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #d1d5db;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.settings-sidebar button.active {
+  background: #1f2937;
+  color: #ffffff;
+}
+
+.settings-sidebar .danger {
+  color: #f87171;
+}
+
+.settings-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* ===============================
+   FORM ELEMENTS
+=============================== */
+input {
+  display: block;
+  width: 320px;
+  padding: 8px 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.success {
+  margin-left: 10px;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+.saving {
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   AVATAR / WHATSAPP STYLE DP
+=============================== */
+.dp-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden; /* 🔥 IMPORTANT */
+  cursor: pointer;
+  margin-bottom: 20px;
+  background: #ffffff;
+}
+
+.dp-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+
+  /* 🔥 FIX MIRROR / FLIP ISSUE */
+  transform: scaleX(1) !important;
+  image-rendering: auto;
+
+  border: 3px solid #e5e7eb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover overlay (camera icon) */
+.dp-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.dp-wrapper:hover .dp-overlay {
+  opacity: 1;
+}
+
+/* ===============================
+   VIDEO SETTINGS
+=============================== */
+.toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* ===============================
+   PASSWORD FORM
+=============================== */
+.password-form input {
+  margin-bottom: 10px;
+}

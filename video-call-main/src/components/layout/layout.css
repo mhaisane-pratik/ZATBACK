@@ -1,0 +1,47 @@
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  
+  color: white;
+  padding: 20px;
+}
+
+.logo {
+  margin-bottom: 24px;
+}
+
+.nav a {
+  display: block;
+  margin-bottom: 14px;
+  color: #cbd5f5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: white;
+}
+
+/* HEADER */
+.header {
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #1e293b;
+}
+
+.menu-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.title {
+  margin: 0;
+}
