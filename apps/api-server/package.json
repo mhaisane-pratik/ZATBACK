@@ -4,7 +4,7 @@
     "description": "ZAT Room Backend API Service",
     "main": "dist/main.js",
     "scripts": {
-        "build": "tsc",
+        "build": "tsc -p tsconfig.json",
         "start": "node dist/main.js",
         "dev": "ts-node-dev --respawn --transpile-only src/main.ts",
         "test": "jest",
