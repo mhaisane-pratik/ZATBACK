@@ -1,0 +1,11 @@
+{
+  "name": "zatback",
+  "version": "1.0.0",
+  "description": "ZAT Back API",
+  "type": "commonjs",
+  "scripts": {
+    "build": "cd apps/api-server && npm install && npm run build",
+    "start": "cd apps/api-server && npm start",
+    "dev": "cd apps/api-server && npm run dev"
+  }
+}

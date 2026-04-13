@@ -1,0 +1,4 @@
+{
+  "buildCommand": "cd apps/api-server && npm install && npm run build",
+  "startCommand": "cd apps/api-server && npm start"
+}
