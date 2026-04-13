@@ -5,7 +5,7 @@ import fs from "fs";
 import path from "path";
 import { promisify } from "util";
 import sharp from "sharp";
-import { fileTypeFromBuffer } from 'file-type'; // npm install file-type
+import { fromBuffer } from 'file-type';
 
 const writeFileAsync = promisify(fs.writeFile);
 const mkdirAsync = promisify(fs.mkdir);

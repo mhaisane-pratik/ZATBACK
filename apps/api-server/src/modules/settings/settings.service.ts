@@ -4,6 +4,7 @@ import { defaultSettings } from "./defaultSetting";
 import bcrypt from "bcrypt";
 import fs from "fs";
 import path from "path";
+import multer from "multer";
 
 export class SettingsService {
   private repo = AppDataSource.getRepository(UserSettings);
@@ -48,7 +49,7 @@ export class SettingsService {
     return updated[section];
   }
 
-  async uploadAvatar(userId: string, file: Express.Multer.File) {
+  async uploadAvatar(userId: string, file: multer.File) {
     const ext = path.extname(file.originalname);
     const filename = `avatar_${userId}_${Date.now()}${ext}`;
     const fullPath = path.join(this.avatarDir, filename);
@@ -85,7 +86,7 @@ export class SettingsService {
   async resetSettings(userId: string) {
     await this.repo.update(
       { user_id: userId },
-      { settings: defaultSettings }
+      { settings: defaultSettings as any }
     );
     return defaultSettings;
   }

@@ -1,0 +1,1 @@
+{"version":3,"file":"auth-context.js","sourceRoot":"","sources":["../../../src/common/middlewares/auth-context.ts"],"names":[],"mappings":";;AAMA,kCAYC;AAZD,SAAgB,WAAW,CACzB,GAAY,EACZ,IAAc,EACd,IAAkB;IAGlB,GAAG,CAAC,IAAI,GAAG;QACT,EAAE,EAAE,sCAAsC;QAC1C,UAAU,EAAE,sCAAsC;KACnD,CAAC;IAEF,IAAI,EAAE,CAAC;AACT,CAAC"}
