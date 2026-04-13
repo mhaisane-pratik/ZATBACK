@@ -19,7 +19,10 @@ const server = http.createServer(app);
 /* ================= MIDDLEWARE ================= */
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173", // Local dev
+      "https://statuesque-flan-c818f0.netlify.app", // Netlify frontend
+    ],
     credentials: true,
   })
 );
@@ -36,7 +39,10 @@ app.use(
 /* ================= SOCKET.IO ================= */
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173", // Local dev
+      "https://statuesque-flan-c818f0.netlify.app", // Netlify frontend
+    ],
     methods: ["GET", "POST"],
     credentials: true,
   },
